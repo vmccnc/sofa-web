@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sofa Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .sofa-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 60%; /* Adjust image container width */
+        }
+        .main-image-container {
+            width: 100%;
+            aspect-ratio: 3/2; /* Maintains a 1200x800 aspect ratio */
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .thumbnails img {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: border 0.3s;
+        }
+        .thumbnails img:hover {
+            border: 2px solid #777;
+        }
+        .text-container {
+            flex: 1;
+            padding: 20px;
+            max-width: 40%;
+        }
+        .sofa-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .sofa-description {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .sofa-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .text-container {
+                max-width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+            .image-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function changeImage(section, src) {
+            document.getElementById(`main-image-${section}`).src = src;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="sofa-section">
+        <div class="image-container">
+            <div class="main-image-container">
+                <img id="main-image-1" class="main-image" src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fa1.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" alt="Sofa 1">
+            </div>
+            <div class="thumbnails">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fa1.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" onclick="changeImage(1, this.src)" alt="Sofa 1 Thumbnail 1">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fa2.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" onclick="changeImage(1, this.src)" alt="Sofa 1 Thumbnail 2">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fa3.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" onclick="changeImage(1, this.src)" alt="Sofa 1 Thumbnail 3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fa4.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" onclick="changeImage(1, this.src)" alt="Sofa 1 Thumbnail 4">
+            </div>
+        </div>
+        <div class="text-container">
+            <h2 class="sofa-title">Sofa 1: SARDYNIA</h2>
+            <div class="sofa-description">
+                powierzchnia spania: 143x190 cm<br>
+                głębokość: 97 cm<br>
+                długość całkowita: 222 cm
+            </div>
+        </div>
+    </div>
+
+    <div class="sofa-section">
+        <div class="image-container">
+            <div class="main-image-container">
+                <img id="main-image-2" class="main-image" src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fb1.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" alt="Sofa 2">
+            </div>
+            <div class="thumbnails">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fb1.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" onclick="changeImage(2, this.src)" alt="Sofa 2 Thumbnail 1">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fb2.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa1" onclick="changeImage(2, this.src)" alt="Sofa 2 Thumbnail 2">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fb3.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa2" onclick="changeImage(2, this.src)" alt="Sofa 2 Thumbnail 3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fb4.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa3" onclick="changeImage(2, this.src)" alt="Sofa 2 Thumbnail 4">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fb5.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa4" onclick="changeImage(2, this.src)" alt="Sofa 2 Thumbnail 5">
+            </div>
+        </div>
+        <div class="text-container">
+            <h2 class="sofa-title">Sofa 2: KIERI</h2>
+            <div class="sofa-description">
+                powierzchnia spania: 143x190 cm<br>
+                głębokość: 97 cm<br>
+                długość całkowita: 222 cm<br>
+                Możliwość zmiany grubości lub wzoru boczków.
+            </div>
+        </div>
+    </div>
+
+    <div class="sofa-section">
+        <div class="image-container">
+            <div class="main-image-container">
+                <img id="main-image-3" class="main-image" src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fc1.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" alt="Sofa 3">
+            </div>
+            <div class="thumbnails">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fc1.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa0" onclick="changeImage(3, this.src)" alt="Sofa 3 Thumbnail 1">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fc2.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa1" onclick="changeImage(3, this.src)" alt="Sofa 3 Thumbnail 2">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fc3.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa2" onclick="changeImage(3, this.src)" alt="Sofa 3 Thumbnail 3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fc4.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa3" onclick="changeImage(3, this.src)" alt="Sofa 3 Thumbnail 4">
+                <img src="https://firebasestorage.googleapis.com/v0/b/smile-app-fe045.appspot.com/o/furniture%2Fc5.jpg?alt=media&token=1ae4c849-d5ae-4525-aaa8-673c8baa9aa4" onclick="changeImage(3, this.src)" alt="Sofa 3 Thumbnail 5">
+            </div>
+        </div>
+        <div class="text-container">
+            <h2 class="sofa-title">Sofa 3: FLORENCJA</h2>
+            <div class="sofa-description">
+                powierzchnia spania: 143x190 cm<br>
+                głębokość: 97 cm<br>
+                długość całkowita: 220 cm<br>
+                Możliwość zmiany grubości lub wzoru boczków.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
